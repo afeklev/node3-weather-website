@@ -23,7 +23,7 @@ app.use(express.static(publicDirectoryPath))
 
 app.get('', (req,res) => {
     res.render('index', {
-        title: 'Weather',
+        title: 'Weather Application',
         name: 'Afek Lev'
     })
 })
@@ -46,7 +46,7 @@ app.get('/help', (req,res) => {
 app.get('/weather', (req, res) => {
     if(!req.query.address){
         return res.send({
-            error: 'You must provide a search term of address'
+            error: 'You must provide a search term of location'
         })
     }
 
